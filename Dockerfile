@@ -1,16 +1,20 @@
-# Use an official OpenJDK base image
-FROM openjdk:17-jdk-slim
+# Stage 1: Build the application
+FROM maven:3.9.4-eclipse-temurin-17 AS build
 
-# Set a working directory inside the image
-WORKDIR /app
+# Set the working directory
+COPY . .
 
-# Copy the Maven/Gradle built JAR file into the container
-# Assuming your JAR file will be named as `stocktracker-backend.jar`
-# Update this if the JAR file name is different
-COPY target/stocktracker-backend-0.0.1-SNAPSHOT.jar app.jar
+
+# Package the application (skip tests for faster build, adjust as necessary)
+RUN mvn clean package -DskipTests
+
+
+FROM eclipse-temurin:17-alpine
+# Copy only the built JAR file from the Maven build stage
+COPY --from=build /target/*.jar app.jar
 
 # Expose the application port
 EXPOSE 8080
 
-# Set the entry point to run the JAR file
+# Set the entry point to run the JAR
 ENTRYPOINT ["java", "-jar", "app.jar"]
