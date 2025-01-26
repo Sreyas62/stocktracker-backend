@@ -17,7 +17,7 @@ A simple portfolio tracker backend application to manage stock holdings. It prov
 ## Features
 - **CRUD Operations**: Create, Read, Update, and Delete stocks in the portfolio.
 - **Real-time Updates**: Fetches real-time stock prices using an external API.
-- **CORS Configuration**: Configured CORS for interaction with a frontend hosted on `http://localhost:5173`.
+- **CORS Configuration**: Configured CORS for interaction with any link.
 - **Data Persistence**: Uses MySQL as the database for storing stock details.
 
 ---
@@ -86,10 +86,10 @@ Before running the project, ensure that you have the following installed on your
    - All stock data, excluding real-time fetched prices, is persistently stored in the database.
 
 3. **Frontend Integration**:
-   - The backend is configured to work with a React-based frontend running on `http://localhost:5173`.
+   - The backend is configured to work with a React-based frontend running on `http://localhost:5173` or `https://stocktracker-backend-2zve.onrender.com`.
 
 4. **CORS**:
-   - CORS policy is set up to allow requests only from the specified frontend `http://localhost:5173`.
+   - CORS policy is set up to allow requests from any link.
 
 5. **Error Handling**:
    - Custom exceptions like `ResourceNotFoundException` handle errors for invalid stock IDs.
@@ -101,9 +101,9 @@ Before running the project, ensure that you have the following installed on your
 
 ## Links
 
-- **Deployed Application**: *(Not available)*
-- **Live API Documentation**: *(Not available)*
-- **Frontend Repository**: *(Provide a link if available)*
+- **Deployed Application**: *`https://stocktracker-backend-2zve.onrender.com/api/stocks`*
+- **Live API Documentation**: *`https://drive.google.com/file/d/1B0WXa9sogO61KtRsKJqS_YopkHutPNRA/view?usp=sharing`*
+- **Frontend Repository**: *`https://github.com/Sreyas62/stocktracker-frontend`*
 
 ---
 
