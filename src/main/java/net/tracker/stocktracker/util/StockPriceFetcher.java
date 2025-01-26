@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class StockPriceFetcher {
     private static final String API_URL = "https://www.alphavantage.co/query";
-    private static final String API_KEY = "P8R71TNBO2RWAUQQ";
+    private static final String API_KEY = "XVQWCN6U0PP1E258";
 
     public Double fetchCurrentPrice(String ticker) {
         try {
